@@ -1,7 +1,9 @@
-import '../styles/global.scss';
+import Page from "components/Page";
 
-const index = () => (
-  <div className="bg">Hello</div>
+const Home = () => (
+  <Page>
+    <p>Hello</p>
+  </Page>
 );
 
-export default index;
+export default Home;
