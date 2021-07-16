@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from 'next/link';
-import capitalizeFirstLetter from "modules/capitalize";
+import capitalizeFirstLetter from "helpers/capitalize";
 
 interface Props {
   url: string
