@@ -3,16 +3,16 @@ import Link from 'next/link';
 import capitalizeFirstLetter from 'helpers/capitalize';
 
 interface Props {
-  url: string
+  url: string,
+  isActive: boolean
 }
 
-const NavLink: FC<Props> = ({ url }: Props) => (
-  <Link href={`/${url}`}>
-    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-    <a className="mr-28 text-lg">
+const NavLink: FC<Props> = ({ url, isActive }: Props) => (
+  <li className={`text-lg list-none hover:text-xl duration-200 ${isActive ? 'underlined' : ''}`}>
+    <Link href={`/${url}`}>
       { url !== '' ? capitalizeFirstLetter(url) : 'Home' }
-    </a>
-  </Link>
+    </Link>
+  </li>
 );
 
 export default NavLink;
