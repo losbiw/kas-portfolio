@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.underlined {
+  position: relative;
+
+  &::after {
+    @apply bg-gray-200;
+    position: absolute;
+    content: '';
+    height: 1px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
