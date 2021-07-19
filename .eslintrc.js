@@ -52,4 +52,7 @@ module.exports = {
     'linebreak-style': 'off',
     'no-param-reassign': 'off',
   },
+  globals: {
+    React: true,
+  },
 };
