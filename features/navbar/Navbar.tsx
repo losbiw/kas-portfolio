@@ -1,11 +1,11 @@
-import { FC } from "react";
-import Logo from "./Logo";
-import NavLink from "./NavLink";
+import { FC } from 'react';
+import Logo from './Logo';
+import NavLink from './NavLink';
 
 const links = ['', 'portfolio', 'contact'];
 
 const Navbar: FC = () => (
-  <nav className="container flex justify-between">
+  <nav className="container flex justify-between pt-16">
     <Logo bold="nefarious" thin=".kas" />
 
     <div className="flex">
@@ -16,7 +16,7 @@ const Navbar: FC = () => (
       }
     </div>
 
-    <div></div>
+    <div />
   </nav>
 );
 

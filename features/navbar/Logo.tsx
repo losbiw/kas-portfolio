@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 interface Props {
   bold: string,
@@ -7,8 +7,8 @@ interface Props {
 
 const Logo: FC<Props> = ({ bold, thin }: Props) => (
   <div className="flex">
-    <p className="font-semibold">{bold}</p>
-    <p>{thin}</p>
+    <p className="font-semibold text-lg">{bold}</p>
+    <p className="text-lg">{thin}</p>
   </div>
 );
 
