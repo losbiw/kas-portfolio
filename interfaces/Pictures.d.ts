@@ -1,6 +1,10 @@
 export enum Direction {
-  Left = 'left',
-  Right = 'right'
+  Left = '-rotate-6',
+  Right = 'rotate-6'
+}
+
+export enum Align {
+  Top = 'self-start'
 }
 
 export enum Size {

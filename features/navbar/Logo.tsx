@@ -6,9 +6,9 @@ interface Props {
 }
 
 const Logo: FC<Props> = ({ bold, thin }: Props) => (
-  <div className="flex">
-    <p className="font-semibold text-lg">{bold}</p>
-    <p className="text-lg">{thin}</p>
+  <div className="flex ml-10 md:ml-0">
+    <p className="font-semibold text-xl">{bold}</p>
+    <p className="text-xl">{thin}</p>
   </div>
 );
 
