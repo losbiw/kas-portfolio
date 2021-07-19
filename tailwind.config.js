@@ -3,12 +3,18 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'poppins': ['poppins', 'serif']
+      poppins: ['poppins', 'serif'],
     },
-    extend: {},
+    extend: {
+      borderRadius: {
+        huge: '20%',
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      fontSize: ['hover'],
+    },
   },
   plugins: [],
-}
+};
