@@ -1,7 +1,22 @@
-import { GetStaticProps, GetStaticPropsResult } from 'next';
+// the comments only exist for development purpose
+
 // import fs from 'fs/promises';
 // import { join } from 'path';
+
+// export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsResult<Props>> => {
+//   const data = await fs.readFile(join(__dirname, '../../../', 'dev/data.json'), 'utf8');
+//   const parsedData = JSON.parse(data);
+
+//   return {
+//     props: {
+//       instagramData: parsedData,
+//     },
+//   };
+// };
+
+import { GetStaticProps, GetStaticPropsResult } from 'next';
 import { FC } from 'react';
+import { curly } from 'node-libcurl';
 import ExamplesPanel from 'features/examples/ExamplePanel';
 import Page from '../features/Page';
 import Title from '../features/Title';
@@ -25,23 +40,13 @@ const Contact: FC<Props> = ({ instagramData }: Props) => (
   </Page>
 );
 
-// this only exists for development purpose
-
-// export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsResult<Props>> => {
-//   const data = await fs.readFile(join(__dirname, '../../../', 'dev/data.json'), 'utf8');
-//   const parsedData = JSON.parse(data);
-
-//   return {
-//     props: {
-//       instagramData: parsedData,
-//     },
-//   };
-// };
-
 export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsResult<Props>> => {
   const instagramId = 9188954448;
-  const instagramRes = await fetch(`https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"${instagramId}","first":50,"after":null}`);
-  const json = await instagramRes.json();
+  const { data: json } = await curly(`https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"${instagramId}","first":50,"after":null}`, {
+    followLocation: true,
+    sslVerifyHost: false,
+    sslVerifyPeer: false,
+  });
 
   const parsedData = json.data.user.edge_owner_to_timeline_media.edges.map(({ node }: any) => {
     // eslint-disable-next-line camelcase
