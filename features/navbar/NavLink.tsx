@@ -8,7 +8,7 @@ interface Props {
 }
 
 const NavLink: FC<Props> = ({ url, isActive }: Props) => (
-  <li className={`text-lg list-none hover:text-xl duration-200 ${isActive ? 'underlined' : ''}`}>
+  <li className={`text-lg my-3 lg:my-0 list-none hover:text-xl duration-200 ${isActive ? 'underlined' : ''}`}>
     <Link href={`/${url}`}>
       { url !== '' ? capitalizeFirstLetter(url) : 'Home' }
     </Link>

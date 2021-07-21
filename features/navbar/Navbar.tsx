@@ -1,5 +1,7 @@
+// This module is an absolute mess and especially its animations, I'll need to refactor it later
+
 import { useRouter } from 'next/router';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Logo from './Logo';
 import NavLink from './NavLink';
 import Menu from '../../public/icons/menu.svg';
@@ -7,13 +9,26 @@ import Menu from '../../public/icons/menu.svg';
 const links = ['', 'portfolio', 'contact'];
 
 const Navbar: FC = () => {
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isClosing, setIsClosing] = useState(true);
+  const [styleClass, setStyleClass] = useState({ bottom: '100vh' });
+
   const router = useRouter();
 
   return (
     <nav className="container flex justify-between pt-10 sm:pt-16">
       <Logo bold="nefarious" thin=".kas" />
 
-      <div className="hidden lg:flex justify-between w-96">
+      <div
+        className={
+          `bottom-page flex justify-center w-screen z-20 flex-col h-screen left-0 bg-dark-grey bg-opacity-90 backdrop-filter 
+          backdrop-blur-sm absolute items-center lg:static lg:justify-between lg:w-96 lg:bg-transparent lg:h-auto lg:flex-row`
+        }
+        style={{
+          animation: isAnimating ? `appear 800ms forwards ${isClosing ? 'reverse' : ''}` : undefined,
+          ...styleClass,
+        }}
+      >
         {
         links.map((link) => (
           <NavLink url={link} key={link} isActive={router.pathname === `/${link}`} />
@@ -21,7 +36,20 @@ const Navbar: FC = () => {
       }
       </div>
 
-      <button className="mr-10 lg:hidden" type="button">
+      <button
+        className="mr-10 lg:hidden z-30"
+        type="button"
+        onClick={() => {
+          setIsAnimating(true);
+          setStyleClass(isClosing ? { bottom: '100vh' } : { bottom: '0' });
+          setIsClosing(!isClosing);
+
+          setTimeout(() => {
+            setStyleClass(!isClosing ? { bottom: '100vh' } : { bottom: '0' });
+            setIsAnimating(false);
+          }, 800);
+        }}
+      >
         <Menu className="w-7 h-7 fill-current text-gray-200" />
       </button>
 
