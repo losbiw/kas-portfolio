@@ -18,7 +18,7 @@ const Contact: FC<Props> = ({ instagramData }: Props) => (
     <div className="mt-24">
       <ExamplesPanel pictures={pictures} />
     </div>
-    <div className="mt-20 mb-8">
+    <div className="mt-10 xl:mt-20 mb-8">
       <Title>Portfolio</Title>
     </div>
     <PostsPanel posts={instagramData} />
