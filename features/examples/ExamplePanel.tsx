@@ -1,4 +1,5 @@
-import { FC, useEffect, useState } from 'react';
+import useWindowWidth from 'hooks/useWindowWidth';
+import { FC } from 'react';
 import { Picture, Align } from '../../types/Pictures.d';
 import Example from './Example';
 
@@ -27,11 +28,7 @@ const calculateAlignment = (index: number, windowWidth: number | undefined): Ali
 };
 
 const ExamplesPanel: FC<Props> = ({ pictures }: Props) => {
-  const [windowWidth, setWindowWidth] = useState<number>();
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-  }, []);
+  const windowWidth = useWindowWidth();
 
   return (
     <div className="flex justify-center items-end mb-16 sm:mb-24 xl:mb-0">
