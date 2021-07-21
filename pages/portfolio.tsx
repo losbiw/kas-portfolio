@@ -37,7 +37,8 @@ export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsRe
 };
 
 // export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsResult<Props>> => {
-//   const instagramRes = await fetch('https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"9188954448","first":50,"after":null}');
+//   const instagramId = 9188954448;
+//   const instagramRes = await fetch(`https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"${instagramId}","first":50,"after":null}`);
 //   const json = await instagramRes.json();
 
 //   const parsedData = json.data.user.edge_owner_to_timeline_media.edges.map(({ node }: any) => {
