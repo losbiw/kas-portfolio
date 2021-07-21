@@ -8,4 +8,7 @@ module.exports = {
 
     return config;
   },
+  images: {
+    domains: ['instagram.fhrk10-1.fna.fbcdn.net'],
+  },
 };
