@@ -1,7 +1,7 @@
 // This module is an absolute mess and especially its animations, I'll need to refactor it later
 
-import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
+import usePathname from '../../hooks/usePathname';
 import Logo from './Logo';
 import NavLink from './NavLink';
 import Menu from '../../public/icons/menu.svg';
@@ -13,7 +13,7 @@ const Navbar: FC = () => {
   const [isClosing, setIsClosing] = useState(true);
   const [styleClass, setStyleClass] = useState({ bottom: '100vh' });
 
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <nav className="container flex justify-between pt-10 sm:pt-16">
@@ -31,7 +31,7 @@ const Navbar: FC = () => {
       >
         {
         links.map((link) => (
-          <NavLink url={link} key={link} isActive={router.pathname === `/${link}`} />
+          <NavLink url={link} key={link} isActive={pathname === `/${link}`} />
         ))
       }
       </div>
