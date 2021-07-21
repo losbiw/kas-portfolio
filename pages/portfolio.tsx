@@ -44,8 +44,15 @@ export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsRe
   const instagramId = 9188954448;
   const { data: json } = await curly(`https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"${instagramId}","first":50,"after":null}`, {
     followLocation: true,
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36',
     sslVerifyHost: false,
     sslVerifyPeer: false,
+    httpHeader: [
+      'accept: */*',
+      'origin: https://www.instagram.com/',
+      'referer: https://www.instagram.com/',
+      'X-Requested-With: XMLHttpRequest',
+    ],
   });
 
   const parsedData = json.data.user.edge_owner_to_timeline_media.edges.map(({ node }: any) => {
