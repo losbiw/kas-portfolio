@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsRe
     const { display_url: url, edge_media_to_caption } = node;
     const desc = edge_media_to_caption.edges[0].node.text;
 
-    const parsedDesc = desc.match(/[^\n#]*/)[0];
+    const parsedDesc = desc.match(/[^\n]*/)[0];
 
     return {
       url,
