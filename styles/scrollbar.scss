@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+  background: #007acc;
+  width: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400;
+  background-clip: padding-box;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
