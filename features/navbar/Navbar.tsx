@@ -22,7 +22,7 @@ const Navbar: FC = () => {
       <div
         className={
           `bottom-page flex justify-center w-screen z-20 flex-col h-screen left-0 bg-dark-grey bg-opacity-90 backdrop-filter 
-          backdrop-blur-sm absolute items-center lg:static lg:justify-between lg:w-96 lg:bg-transparent lg:h-auto lg:flex-row`
+          backdrop-blur-sm fixed items-center lg:static lg:justify-between lg:w-96 lg:bg-transparent lg:h-auto lg:flex-row`
         }
         style={{
           animation: isAnimating ? `appear 800ms forwards ${isClosing ? 'reverse' : ''}` : undefined,
