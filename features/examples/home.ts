@@ -1,4 +1,4 @@
-import { Picture, Direction, Size } from '../../interfaces/Pictures.d';
+import { Picture, Direction, Size } from '../../types/Pictures.d';
 
 const pictures: Picture[] = [
   {

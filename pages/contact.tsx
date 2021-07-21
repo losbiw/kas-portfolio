@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import LinkInterface from '../interfaces/Link.d';
+import LinkInterface from '../types/Link';
 import Page from '../features/Page';
 import Link from '../features/Link';
 

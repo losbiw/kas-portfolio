@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { Picture, Align } from '../../interfaces/Pictures.d';
+import { Picture, Align } from '../../types/Pictures.d';
 import Example from './Example';
 
 interface Props {

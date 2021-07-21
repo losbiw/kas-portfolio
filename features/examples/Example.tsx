@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { Picture, Size, Align } from '../../interfaces/Pictures.d';
+import { Picture, Size, Align } from '../../types/Pictures.d';
 
 interface Props extends Picture {
   offset: string,
@@ -20,7 +20,7 @@ const Example: FC<Props> = ({
             src={src[0] === '/' ? src : `/${src}`}
             alt={alt}
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
           />
         </div>
       </div>
