@@ -27,7 +27,9 @@ const PostsPanel: FC<Props> = ({ posts }: Props) => {
   const width = useWindowWidth();
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 grid-flow-row mb-12 md:mb-24 h-auto shadow-2xl rounded-semi overflow-x-hidden overflow-y-scroll bg-gray-600 bg-opacity-25">
+    <div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 grid-flow-row mb-12
+      md:mb-24 h-auto shadow-2xl rounded-semi overflow-x-hidden overflow-y-scroll bg-gray-600 bg-opacity-25"
+    >
       {
       posts.map(({ url, description }, i) => {
         const alignment = calculateAlignment(i + 1, width);
@@ -49,7 +51,8 @@ const PostsPanel: FC<Props> = ({ posts }: Props) => {
         Extra={
         () => (
           <a
-            className="absolute top-0 bottom-0 right-0 left-0 flex leading-relaxed text-xs sm:text-md xl:text-lg p-8 items-center justify-center text-gray-600 bg-gray-100"
+            className="absolute top-0 bottom-0 right-0 left-0 flex leading-relaxed text-xs
+            sm:text-md xl:text-lg p-8 items-center justify-center text-gray-600 bg-gray-100"
             href="https://www.instagram.com/nefarious.kas/"
             target="_blank"
             rel="noreferrer"

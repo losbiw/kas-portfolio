@@ -10,7 +10,8 @@ const Page: FC = ({ children }) => {
     <div>
       <Head />
       <div
-        className="min-h-screen w-screen max-w-full overflow-hidden font-poppins overflow-x-hidden flex items-center flex-col justify-between bg-top bg-cover text-gray-200"
+        className="min-h-screen w-screen max-w-full overflow-hidden font-poppins overflow-x-hidden
+        flex items-center flex-col justify-between bg-top bg-cover text-gray-200"
         style={{ backgroundImage: pathname === '/portfolio' ? 'url("/background.png")' : 'url("/background-desktop.png")' }}
       >
         <Navbar />
