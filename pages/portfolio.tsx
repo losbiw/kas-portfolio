@@ -13,7 +13,7 @@ import pictures from '../features/examples/portfolio';
 import PostsPanel from '../features/posts/PostsPanel';
 import Post from '../types/Post.d';
 
-const exec = promisify(_exec);
+// const exec = promisify(_exec);
 
 interface Props {
   instagramData: Post[]
