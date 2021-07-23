@@ -4,7 +4,6 @@ import Image from 'next/image';
 import {
   borderNone, hoverBorderNone, opacity, margins, absolutePositioning,
 } from './styles';
-import contentfulLoader from '../../loaders/contentfulLoader';
 import Alignment from '../../types/Alignment.d';
 
 interface Styling {
@@ -60,7 +59,6 @@ const Post: FC<Props> = ({
         { url && (
           <Image
             src={url}
-            loader={contentfulLoader}
             alt={description}
             layout="fill"
             objectFit="cover"
