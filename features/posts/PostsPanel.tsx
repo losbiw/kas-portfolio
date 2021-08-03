@@ -28,7 +28,7 @@ const PostsPanel: FC<Props> = ({ posts }: Props) => {
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 grid-flow-row mb-12
-      md:mb-24 h-auto shadow-2xl rounded-semi overflow-x-hidden overflow-y-scroll bg-gray-600 bg-opacity-25"
+      md:mb-24 h-auto shadow-2xl rounded-semi overflow-x-hidden bg-gray-600 bg-opacity-25"
     >
       {
       posts.map(({ url, description }, i) => {
