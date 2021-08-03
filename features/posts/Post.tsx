@@ -43,6 +43,7 @@ const Post: FC<Props> = ({
     };
 
   const descriptionOpacity = isDescriptionVisible ? opacity.visible : opacity.hidden;
+  const parsedUrl = url.replace(/^[^.]*/, 'https://scontent-amt2-1');
 
   return (
     <div className="justify-self-center flex relative">
@@ -58,7 +59,7 @@ const Post: FC<Props> = ({
       >
         { url && (
           <Image
-            src={url}
+            src={parsedUrl}
             alt={description}
             layout="fill"
             objectFit="cover"
