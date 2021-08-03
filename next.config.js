@@ -13,6 +13,7 @@ module.exports = {
       'instagram.fhrk10-1.fna.fbcdn.net',
       'scontent-amt2-1.cdninstagram.com',
       'scontent-ams4-1.cdninstagram.com',
+      'scontent-iad3-1.cdninstagram.com',
     ],
   },
 };
