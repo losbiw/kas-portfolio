@@ -9,6 +9,10 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['instagram.fhrk10-1.fna.fbcdn.net'],
+    domains: [
+      'instagram.fhrk10-1.fna.fbcdn.net',
+      'scontent-amt2-1.cdninstagram.com',
+      'scontent-ams4-1.cdninstagram.com',
+    ],
   },
 };

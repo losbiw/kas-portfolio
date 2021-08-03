@@ -20,6 +20,7 @@ const Example: FC<Props> = ({
       <div className={`bg-gray-700 transform p-1 sm:p-2 w-full h-full rounded-huge ${rotationDegree}`}>
         <div className="w-full h-full relative rounded-huge overflow-hidden">
           <Image
+            crossOrigin="anonymous"
             src={src[0] === '/' ? src : `/${src}`}
             alt={alt}
             layout="fill"
