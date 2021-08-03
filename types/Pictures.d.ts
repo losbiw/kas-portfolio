@@ -4,7 +4,7 @@ export enum Direction {
 }
 
 export enum Align {
-  Top = 'self-start'
+  Top = 'top'
 }
 
 export enum Size {
