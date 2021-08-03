@@ -43,7 +43,7 @@ const Post: FC<Props> = ({
     };
 
   const descriptionOpacity = isDescriptionVisible ? opacity.visible : opacity.hidden;
-  const parsedUrl = url.replace(/^[^.]*/, 'https://scontent-amt2-1');
+  const parsedUrl = process.env.NODE_ENV === 'production' ? url.replace(/^[^.]*/, 'https://scontent-amt2-1') : url;
 
   return (
     <div className="justify-self-center flex relative">
