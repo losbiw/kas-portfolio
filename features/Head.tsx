@@ -10,6 +10,7 @@ const HeadComponent: FC = () => {
     <Head>
       <title>{ pathname !== '' ? capitalizeFirstLetter(pathname) : 'Home'}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta property="description" content="A personal portfolio website" />
       <meta property="og:title" content="nefarious.kas" />
       <meta property="og:description" content="A personal portfolio website" />
       <meta property="og:image" content="http://tolist.herokuapp.com/favicons/kas_og.png" />
