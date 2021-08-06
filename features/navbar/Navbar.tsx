@@ -38,7 +38,7 @@ const Navbar: FC = () => {
 
       <button
         className="mr-10 lg:hidden z-30"
-        name="menu"
+        aria-label="menu"
         type="button"
         onClick={() => {
           setIsAnimating(true);
