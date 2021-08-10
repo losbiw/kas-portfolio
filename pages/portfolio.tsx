@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsRe
     props: {
       instagramData: parsedData,
     },
-    revalidate: 3600,
+    revalidate: 60,
   };
 };
 
