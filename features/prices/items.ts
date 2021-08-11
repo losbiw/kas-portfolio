@@ -3,7 +3,7 @@ import { PriceItem } from '../../types/Price';
 const items: PriceItem[] = [
   {
     image: {
-      src: 'prices/split-guy.png',
+      src: 'prices/dude.png',
       alt: 'Simple headshot of my character with warm colors',
     },
     text: {
