@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import LocalImage from 'features/LocalImage';
 import {
-  Picture, Size, Align, Direction,
+  ExtendedPicture, Size, Align, Direction,
 } from '../../types/Pictures.d';
 
-interface Props extends Picture {
+interface Props extends ExtendedPicture {
   offset: string,
   align?: Align
 }
@@ -12,21 +12,24 @@ interface Props extends Picture {
 const Example: FC<Props> = ({
   src, alt, direction, size, offset, align,
 }: Props) => {
-  const calcSize = size === Size.Big ? 'w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 my-8 sm:mb-8' : 'w-24 h-24 sm:w-36 sm:h-36 lg:w-56 lg:h-56 z-10';
+  let sizeStyle;
+
+  if (size === Size.Big) {
+    sizeStyle = 'w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 my-8 sm:mb-8';
+  } else if (size === Size.Middle) {
+    sizeStyle = 'w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72';
+  } else if (size === Size.Small) {
+    sizeStyle = 'w-24 h-24 sm:w-36 sm:h-36 lg:w-56 lg:h-56 z-10';
+  }
 
   const rotationDegree = direction === Direction.Left ? '-rotate-6' : 'rotate-6';
   const alignment = align === Align.Top && 'self-start';
 
   return (
-    <div className={`bg-gray-200 p-1 rounded-huge relative shadow-xl ${offset} ${calcSize} ${alignment}`}>
+    <div className={`bg-gray-200 p-1 rounded-huge relative shadow-xl ${offset} ${sizeStyle} ${alignment}`}>
       <div className={`bg-gray-700 transform p-1 sm:p-2 w-full h-full rounded-huge ${rotationDegree}`}>
         <div className="w-full h-full relative rounded-huge overflow-hidden">
-          <Image
-            src={src[0] === '/' ? src : `/${src}`}
-            alt={alt}
-            layout="fill"
-            objectFit="cover"
-          />
+          <LocalImage src={src} alt={alt} />
         </div>
       </div>
     </div>
