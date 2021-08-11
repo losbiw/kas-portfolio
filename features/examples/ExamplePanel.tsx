@@ -1,6 +1,6 @@
 import useWindowWidth from 'hooks/useWindowWidth';
 import { FC } from 'react';
-import { Picture, Align } from '../../types/Pictures.d';
+import { ExtendedPicture as Picture, Align } from '../../types/Pictures.d';
 import Example from './Example';
 
 interface Props {
