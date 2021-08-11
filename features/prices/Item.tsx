@@ -17,8 +17,8 @@ const Item: FC<Props> = ({
   const directionSide = isUneven ? Direction.Left : Direction.Right;
 
   return (
-    <div className={`flex flex-col lg:flex-row items-center justify-center my-20 lg:my-24 py-16 px-4 lg:p-16 rounded-semi
-    bg-gray-700 bg-opacity-20 ${isUneven && 'lg:flex-row-reverse'}`}
+    <div className={`flex flex-col lg:flex-row items-center justify-center my-16 py-16 px-4 lg:py-16 lg:px-10 
+    rounded-semi bg-gray-700 bg-opacity-20 ${isUneven && 'lg:flex-row-reverse'}`}
     >
       <div className={`mb-12 lg:mb-0 ${isUneven ? 'lg:ml-36' : 'lg:mr-36'}`}>
         <Example

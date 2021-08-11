@@ -7,7 +7,7 @@ interface Props {
 }
 
 const PricesList: FC<Props> = ({ prices }: Props) => (
-  <div>
+  <div className="mt-12">
     {
       prices.map(({ image, text }, index) => (
         <Item
