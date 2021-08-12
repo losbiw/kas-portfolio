@@ -1,8 +1,4 @@
-// the comments only exist for development purpose
-
 import { GetStaticProps, GetStaticPropsResult } from 'next';
-// import fs from 'fs/promises';
-// import { join } from 'path';
 import { exec as _exec } from 'child_process';
 import { promisify } from 'util';
 import { FC } from 'react';
@@ -59,16 +55,5 @@ export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsRe
     revalidate: 60,
   };
 };
-
-// export const getStaticProps: GetStaticProps = async (): Promise<GetStaticPropsResult<Props>> => {
-//   const data = await fs.readFile(join(__dirname, '../../../', 'dev/data.json'), 'utf8');
-//   const parsedData = JSON.parse(data);
-
-//   return {
-//     props: {
-//       instagramData: parsedData,
-//     },
-//   };
-// };
 
 export default Contact;
