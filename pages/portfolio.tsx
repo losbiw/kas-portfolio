@@ -1,6 +1,4 @@
 import { GetStaticProps, GetStaticPropsResult } from 'next';
-import { exec as _exec } from 'child_process';
-import { promisify } from 'util';
 import { FC } from 'react';
 import axios from 'axios';
 import ExamplesPanel from 'features/examples/ExamplePanel';
