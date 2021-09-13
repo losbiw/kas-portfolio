@@ -6,7 +6,7 @@ I'm not a big fan of using dozens of frameworks, but the first two ones I've lis
 
 ## Goal
 
-This is a portfolio website created for my girlfriend (whose instagram you could check out [here](https://www.instagram.com/nefarious.kas/) btw)
+This is a portfolio website created for an acquaintance of mine (whose instagram you could check out [here](https://www.instagram.com/nefarious.kas/) btw)
 
 ## Local deployment
 
