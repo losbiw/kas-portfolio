@@ -12,7 +12,7 @@ UPD: 8 months in, not a single job offer requiring knowledge of Tailwind nor Nex
 
 ## Goal
 
-This is a portfolio website created for my ex-girlfriend, breaking up with who didn't make her any less talented (you could check out her instagram [here](https://www.instagram.com/nefarious.kas/))
+This is a portfolio website created for my ex-girlfriend (you could check out her instagram [here](https://www.instagram.com/nefarious.kas/))
 
 ## Local deployment
 
